@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
 class OutputBlack extends StatelessWidget {
-  double variable = 15;
-  OutputBlack({super.key});
+  final double variable = 15;
+  const OutputBlack({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5),
-      child: Stack(
-        children: [
-          Container(
-            width: variable,
-            height: variable,
-            decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(100),
-              border: Border.all(
-                  color: Colors.black, width: 2), // Set the border radius here
-            ),
+      margin: const EdgeInsets.all(5),
+      child: Container(
+        margin: const EdgeInsets.all(5),
+        child: SizedBox(
+          width: 15.0,
+          height: 15.0,
+          child: FloatingActionButton(
+            onPressed: () {
+              onButonPress() {}
+              ;
+            },
+            backgroundColor: Colors.black,
           ),
-        ],
+        ),
       ),
     );
   }

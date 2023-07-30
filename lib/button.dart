@@ -10,33 +10,15 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(5),
-      child: Stack(
-        children: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius:
-                  BorderRadius.circular(100), // Set the border radius here
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 1, left: 10),
-            child: GestureDetector(
-              onTap: () {
-                onButonPress(letter);
-              },
-              child: Text(
-                letter,
-                style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800),
-              ),
-            ),
-          ),
-        ],
+      child: SizedBox(
+        width: 40.0,
+        height: 40.0,
+        child: FloatingActionButton(
+          onPressed: () {
+            onButonPress(letter);
+          },
+          child: Text(letter),
+        ),
       ),
     );
   }
