@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 
 class Congrats extends StatelessWidget {
   final Function ok;
-  const Congrats(this.ok, {super.key});
+  final String score;
+  const Congrats(this.ok, this.score, {super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text("Congrats You Have Won The Game"),
+            Text("Your Score is: $score")
           ],
         ),
         const SizedBox(height: 16),
